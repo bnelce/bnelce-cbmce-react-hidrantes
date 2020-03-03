@@ -1,0 +1,236 @@
+{
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+      "id": 1,
+      "numero": "5434534",
+      "tipo": "Coluna",
+      "cor": "Vermelho",
+      "cep": "60530490",
+      "latitude": -38.541577,
+      "longitude": -3.719093
+      },
+      "imagem": {
+        "url": "/hidrantinho.png",
+        "id": 2,
+        "path": "811b577c3a2f3a6ccd765cd058dc1812.jpg"
+      },
+      "user": {
+        "login": "2024691X",
+        "email": "abner.oliveira.ce@gmail.com",
+        "avatar": {
+          "url": "http://localhost:3333/files/f9bd9d90f5819a872e5671e1fbd9c4a5.jpg",
+          "id": 3,
+          "path": "f9bd9d90f5819a872e5671e1fbd9c4a5.jpg"
+        }
+      },
+      "vistorias": 
+        {
+          "tipo_vistoria": "Inspeção",
+          "tipo_hidrante": "Subterrâneo",
+          "cor": "Vermelho",
+          "pressao": "Ruim",
+          "vazao": "Regular",
+          "condicoes": "Dificuldades",
+          "acesso": "Hidrante Coberto",
+          "instalacao": "Muito fundo;Falta sinalização",
+          "pintura": "Tampa da válvula"
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+      "id": 3,
+      "numero": "2434534",
+      "tipo": "Cooluna",
+      "cor": "Amarelo",
+      "cep": "600530490",
+      "latitude": -38.532260,
+      "longitude": -3.815880
+      },
+      "imagem": {
+        "url": "/hidrantinho.png",
+        "id": 3,
+        "path": "811b577c3a2f3a6ccd765cd058dc1812.jpg"
+      },
+      "user": {
+        "login": "203224691X",
+        "email": "abnewr.oliveira.ce@gmail.com",
+        "avatar": {
+          "url": "http://loocalhost:3333/files/f9bd9d90f5819a872e5671e1fbd9c4a5.jpg",
+          "id": 3,
+          "path": "f9bd9d90f5819a872e5671e1fbd9c4a5.jpg"
+        }
+      },
+      "vistorias": 
+        {
+          "tipo_vistoria": "Inspeção",
+          "tipo_hidrante": "Subterrâneo",
+          "cor": "Vermelho",
+          "pressao": "Ruim",
+          "vazao": "Regular",
+          "condicoes": "Dificuldades",
+          "acesso": "Hidrante Coberto",
+          "instalacao": "Muito fundo;Falta sinalização",
+          "pintura": "Tampa da válvula"
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+      "id": 1,
+      "numero": "5434534",
+      "tipo": "Coluna",
+      "cor": "Vermelho",
+      "cep": "60530490",
+      "latitude": -38.541577,
+      "longitude": -3.719093
+      },
+      "imagem": {
+        "url": "/hidrantinho.png",
+        "id": 2,
+        "path": "811b577c3a2f3a6ccd765cd058dc1812.jpg"
+      },
+      "user": {
+        "login": "2024691X",
+        "email": "abner.oliveira.ce@gmail.com",
+        "avatar": {
+          "url": "http://localhost:3333/files/f9bd9d90f5819a872e5671e1fbd9c4a5.jpg",
+          "id": 3,
+          "path": "f9bd9d90f5819a872e5671e1fbd9c4a5.jpg"
+        }
+      },
+      "vistorias": 
+        {
+          "tipo_vistoria": "Inspeção",
+          "tipo_hidrante": "Subterrâneo",
+          "cor": "Amarelo",
+          "pressao": "Ruim",
+          "vazao": "Regular",
+          "condicoes": "Dificuldades",
+          "acesso": "Hidrante Coberto",
+          "instalacao": "Muito fundo;Falta sinalização",
+          "pintura": "Tampa da válvula"
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+      "id": 1,
+      "numero": "5434534",
+      "tipo": "Coluna",
+      "cor": "Vermelho",
+      "cep": "60530490",
+      "latitude": -38.570950,
+      "longitude": -3.778410
+      },
+      "imagem": {
+        "url": "/hidrantinho.png",
+        "id": 2,
+        "path": "811b577c3a2f3a6ccd765cd058dc1812.jpg"
+      },
+      "user": {
+        "login": "2024691X",
+        "email": "abner.oliveira.ce@gmail.com",
+        "avatar": {
+          "url": "http://localhost:3333/files/f9bd9d90f5819a872e5671e1fbd9c4a5.jpg",
+          "id": 3,
+          "path": "f9bd9d90f5819a872e5671e1fbd9c4a5.jpg"
+        }
+      },
+      "vistorias": 
+        {
+          "tipo_vistoria": "Inspeção",
+          "tipo_hidrante": "Subterrâneo",
+          "cor": "Vermelho",
+          "pressao": "Ruim",
+          "vazao": "Regular",
+          "condicoes": "Dificuldades",
+          "acesso": "Hidrante Coberto",
+          "instalacao": "Muito fundo;Falta sinalização",
+          "pintura": "Tampa da válvula"
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+      "id": 1,
+      "numero": "5434534",
+      "tipo": "Coluna",
+      "cor": "Vermelho",
+      "cep": "60530490",
+      "latitude": -38.506300,
+      "longitude": -3.747560
+      },
+      "imagem": {
+        "url": "/hidrantinho.png",
+        "id": 2,
+        "path": "811b577c3a2f3a6ccd765cd058dc1812.jpg"
+      },
+      "user": {
+        "login": "2024691X",
+        "email": "abner.oliveira.ce@gmail.com",
+        "avatar": {
+          "url": "http://localhost:3333/files/f9bd9d90f5819a872e5671e1fbd9c4a5.jpg",
+          "id": 3,
+          "path": "f9bd9d90f5819a872e5671e1fbd9c4a5.jpg"
+        }
+      },
+      "vistorias": 
+        {
+          "tipo_vistoria": "Inspeção",
+          "tipo_hidrante": "Subterrâneo",
+          "cor": "Amarelo",
+          "pressao": "Ruim",
+          "vazao": "Regular",
+          "condicoes": "Dificuldades",
+          "acesso": "Hidrante Coberto",
+          "instalacao": "Muito fundo;Falta sinalização",
+          "pintura": "Tampa da válvula"
+        }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+      "id": 1,
+      "numero": "5434534",
+      "tipo": "Coluna",
+      "cor": "Vermelho",
+      "cep": "60530490",
+      "latitude": -38.527310,
+      "longitude": -3.775070
+      },
+      "imagem": {
+        "url": "/hidrantinho.png",
+        "id": 2,
+        "path": "811b577c3a2f3a6ccd765cd058dc1812.jpg"
+      },
+      "user": {
+        "login": "2024691X",
+        "email": "abner.oliveira.ce@gmail.com",
+        "avatar": {
+          "url": "http://localhost:3333/files/f9bd9d90f5819a872e5671e1fbd9c4a5.jpg",
+          "id": 3,
+          "path": "f9bd9d90f5819a872e5671e1fbd9c4a5.jpg"
+        }
+      },
+      "vistorias": 
+        {
+          "tipo_vistoria": "Inspeção",
+          "tipo_hidrante": "Subterrâneo",
+          "cor": "Vermelho",
+          "pressao": "Ruim",
+          "vazao": "Regular",
+          "condicoes": "Dificuldades",
+          "acesso": "Hidrante Coberto",
+          "instalacao": "Muito fundo;Falta sinalização",
+          "pintura": "Tampa da válvula"
+        }
+    }
+  ]
+}
