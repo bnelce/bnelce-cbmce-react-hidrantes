@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
+import axios from 'axios';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
@@ -40,10 +41,27 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+
 const Budget = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
+
+  const [data, setData] = useState({count_id: 0});
+    
+    //https://www.robinwieruch.de/react-hooks-fetch-data
+
+    useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get(
+        'http://localhost:3333/dashboard/hidrantes',
+      );
+      setData(result.data[0]);
+    };
+
+    fetchData();
+  }, [data]);
+
 
   return (
     <Card
@@ -64,29 +82,14 @@ const Budget = props => {
             >
               HIDRANTES
             </Typography>
-            <Typography variant="h3">247</Typography>
+  <Typography variant="h3">{data.count_id}</Typography>
           </Grid>
           <Grid item>
             <Avatar className={classes.avatar}>
               <MoneyIcon className={classes.icon} />
             </Avatar>
           </Grid>
-        </Grid>
-        <div className={classes.difference}>
-          <ArrowDownwardIcon className={classes.differenceIcon} />
-          <Typography
-            className={classes.differenceValue}
-            variant="body2"
-          >
-            12%
-          </Typography>
-          <Typography
-            className={classes.caption}
-            variant="caption"
-          >
-            Since last month
-          </Typography>
-        </div>
+        </Grid>        
       </CardContent>
     </Card>
   );
