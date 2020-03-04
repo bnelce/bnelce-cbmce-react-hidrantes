@@ -1,7 +1,22 @@
 import React, { Component } from 'react';
 import { Button, Form, Row, Col } from 'react-bootstrap';
+import axios from 'axios';
 
 export default class FormCadastroHidrante extends Component {
+
+  state = {
+    selectedFile: null
+  }
+
+  fileSelectedHandler = event => {
+    this.setState({selectedFile: event.target.files[0]});
+  }
+
+  fileUploadHandler = () => {
+      // const fd = new FormData();
+      // fd.append('image', this.state.selectedFile, this.state.selectedFile.name);
+  }
+
 
   render() {
   return(
@@ -66,10 +81,10 @@ export default class FormCadastroHidrante extends Component {
           
         </Form.Row>
 
-        <Form.Row><input type="file"/></Form.Row>
+        <Form.Row><input type="file" onChange={this.fileSelectedHandler} /></Form.Row>
       
         <br></br>
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" onClick={this.fileUploadHandler}>
           Cadastrar
         </Button>
         
