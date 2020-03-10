@@ -5,7 +5,25 @@ import axios from 'axios';
 export default class FormCadastroHidrante extends Component {
 
   state = {
-    file: null
+    file: null,
+    numero: null,
+    tipo: null,
+    cor: null,
+    latitude: null,
+    longitude: null,
+    cidade: null,
+    estado: null,
+    cep: null
+  }
+
+  numeroInputChange = e => {
+    console.log(e.target.value);
+    this.setState({newRepo: e.target.value});
+  }
+
+  corInputChange = e => {
+    console.log(e.target.value);
+    this.setState({newRepo: e.target.value});
   }
 
   onChange = event => {
@@ -30,12 +48,17 @@ export default class FormCadastroHidrante extends Component {
   }
 
   render() {
+
+    const { numero, tipo, cor, latitude, longitude, cidade, estado, cep } = this.state;
+
     return(
      <Form onSubmit={this.onFormSubmit}>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Número</Form.Label>
-            <Form.Control placeholder="Número do hidrante" />
+            <Form.Label >Número</Form.Label>
+            <Form.Control  value= {numero} 
+            onChange= {this.numeroInputChange}
+            placeholder="Número do hidrante" />
           </Form.Group>
       
           <Form.Group as={Col} controlId="formGridState">
@@ -49,7 +72,10 @@ export default class FormCadastroHidrante extends Component {
         <Form.Row>
         <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Cor</Form.Label>
-            <Form.Control as="select">
+            <Form.Control 
+            value= {cor} 
+            onChange= {this.corInputChange}
+            as="select">
               <option>Vermelho</option>
               <option>Amarelo</option>
               <option>Azul</option>
