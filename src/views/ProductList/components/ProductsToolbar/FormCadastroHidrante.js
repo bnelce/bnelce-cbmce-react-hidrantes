@@ -17,12 +17,30 @@ export default class FormCadastroHidrante extends Component {
   }
 
   numeroInputChange = e => {
-    console.log(e.target.value);
+    this.setState({newRepo: e.target.value});
+  }
+
+  tipoInputChange = e => {
     this.setState({newRepo: e.target.value});
   }
 
   corInputChange = e => {
-    console.log(e.target.value);
+    this.setState({newRepo: e.target.value});
+  }
+
+  latitudeInputChange = e => {
+    this.setState({newRepo: e.target.value});
+  }
+
+  longitudeInputChange = e => {
+    this.setState({newRepo: e.target.value});
+  }
+
+  cidadeInputChange = e => {
+    this.setState({newRepo: e.target.value});
+  }
+
+  cepInputChange = e => {
     this.setState({newRepo: e.target.value});
   }
 
@@ -49,7 +67,7 @@ export default class FormCadastroHidrante extends Component {
 
   render() {
 
-    const { numero, tipo, cor, latitude, longitude, cidade, estado, cep } = this.state;
+    const { numero, tipo, cor, latitude, longitude, cidade, cep } = this.state;
 
     return(
      <Form onSubmit={this.onFormSubmit}>
@@ -63,7 +81,9 @@ export default class FormCadastroHidrante extends Component {
       
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Tipo</Form.Label>
-            <Form.Control as="select">
+            <Form.Control as="select"
+            value= {tipo} 
+            onChange= {this.tipoInputChange}>
               <option>Coluna</option>
             </Form.Control>
           </Form.Group>
@@ -84,19 +104,25 @@ export default class FormCadastroHidrante extends Component {
 
           <Form.Group as={Col} controlId="formGridCity">
             <Form.Label>Latitude</Form.Label>
-            <Form.Control/>
+            <Form.Control
+            value= {latitude} 
+            onChange= {this.latitudeInputChange}/>
           </Form.Group>
       
           <Form.Group as={Col} controlId="formGridZip">
             <Form.Label>Longitude</Form.Label>
-            <Form.Control />
+            <Form.Control 
+            value= {longitude} 
+            onChange= {this.longitudeInputChange} />
           </Form.Group>
         </Form.Row>
       
         <Form.Row>
         <Form.Group as={Col} controlId="formGridState">
             <Form.Label>Cidade</Form.Label>
-            <Form.Control as="select">
+            <Form.Control as="select"
+            value= {cidade} 
+            onChange= {this.cidadeInputChange}>
               <option>Fortaleza</option>
               <option>Caucaia</option>
               <option>Maracanaú</option>
@@ -113,13 +139,15 @@ export default class FormCadastroHidrante extends Component {
       
           <Form.Group as={Col} controlId="formGridZip">
             <Form.Label>CEP</Form.Label>
-            <Form.Control />
+            <Form.Control 
+            value= {cep} 
+            onChange= {this.cepInputChange}/>
           </Form.Group>
           
         </Form.Row>
 
         <Form.Row>
-          <input type="file" name="myImage" onChange={this.onChange} />
+          <Form.Control type="file" name="myImage" onChange={this.onChange} />
         </Form.Row>
       
         <br></br>
