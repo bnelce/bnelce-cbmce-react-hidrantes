@@ -49,36 +49,25 @@ export default class FormCadastroHidrante extends Component {
   }
 
   onFormSubmit = e => {
-    axios.post('localhost:3223/users', {
-      name: 'Freeeeed',
-      email: 'flintstooooone@hotmail.com',
-      password: 'afadssasadfsd'
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-      console.log("Deu muita merda");
-    });
         e.preventDefault();
         const formData = new FormData();
-        formData.append('myImage',this.state.file);
+        formData.append('file',this.state.file);
         const config = {
           headers: {
-              'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTgzOTQ4MzY1LCJleHAiOjE1ODQ1NTMxNjV9.zQSbGLTp0yK0mZpU1bxE9iCaE3xI85yM2s0OIGlsvIQ',
-              'content-type': 'multipart/form-data'
+              'Content-Type': 'multipart/form-data'
           }
           
       };
-      axios.post('localhost:3223/file',formData,config)
+      axios.post('http://localhost:3223/file',formData,config)
           .then((response) => {
               alert("The file is successfully uploaded");
 
           }).catch((error) => {
             console.log(error);
-
       });
+
+
+
   }
 
   render() {
@@ -163,7 +152,7 @@ export default class FormCadastroHidrante extends Component {
         </Form.Row>
 
         <Form.Row>
-          <Form.Control type="file" name="myImage" onChange={this.onChange} />
+          <input type="file" name="myImage" onChange={this.onChange} />
         </Form.Row>
       
         <br></br>
