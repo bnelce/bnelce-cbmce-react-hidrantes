@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, Row, Col } from 'react-bootstrap';
-import axios from 'axios';
+import api from '../../../../services/api';
 
 export default class FormCadastroHidrante extends Component {
 
@@ -58,7 +58,7 @@ export default class FormCadastroHidrante extends Component {
           }
           
       };
-      axios.post('http://localhost:3223/file',formData,config)
+      api.post('/file',formData,config)
           .then((response) => {
               alert("The file is successfully uploaded");
 
