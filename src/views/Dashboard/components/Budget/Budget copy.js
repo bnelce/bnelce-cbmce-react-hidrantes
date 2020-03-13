@@ -1,16 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
+import axios from 'axios';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
-import {
-  Card,
-  CardContent,
-  Grid,
-  Typography,
-  Avatar,
-  LinearProgress
-} from '@material-ui/core';
-import InsertChartIcon from '@material-ui/icons/InsertChartOutlined';
+import { Card, CardContent, Grid, Typography, Avatar } from '@material-ui/core';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import MoneyIcon from '@material-ui/icons/Money';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,8 +19,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700
   },
   avatar: {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
+    backgroundColor: theme.palette.error.main,
     height: 56,
     width: 56
   },
@@ -33,15 +27,39 @@ const useStyles = makeStyles(theme => ({
     height: 32,
     width: 32
   },
-  progress: {
-    marginTop: theme.spacing(3)
+  difference: {
+    marginTop: theme.spacing(2),
+    display: 'flex',
+    alignItems: 'center'
+  },
+  differenceIcon: {
+    color: theme.palette.error.dark
+  },
+  differenceValue: {
+    color: theme.palette.error.dark,
+    marginRight: theme.spacing(1)
   }
 }));
 
-const TasksProgress = props => {
+
+const Budget = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
+
+  const [data, setData] = useState({count_id:0});
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get(
+        'http://localhost:3333/dashboard/hidrantes',
+      );
+      setData(result.data);
+     console.log(result.data);  
+    };
+    fetchData();
+  }, [data]);
+
 
   return (
     <Card
@@ -60,13 +78,13 @@ const TasksProgress = props => {
               gutterBottom
               variant="body2"
             >
-              VISTORIANTES
+              HIDRANTES
             </Typography>
-            <Typography variant="h3">75.5%</Typography>
+  <Typography variant="h3">{data.count_id}</Typography>
           </Grid>
           <Grid item>
             <Avatar className={classes.avatar}>
-              <InsertChartIcon className={classes.icon} />
+              <MoneyIcon className={classes.icon} />
             </Avatar>
           </Grid>
         </Grid>        
@@ -75,8 +93,8 @@ const TasksProgress = props => {
   );
 };
 
-TasksProgress.propTypes = {
+Budget.propTypes = {
   className: PropTypes.string
 };
 
-export default TasksProgress;
+export default Budget;
